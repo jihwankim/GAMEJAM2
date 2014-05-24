@@ -11,7 +11,6 @@ public class PlayerAttackScript : MonoBehaviour {
 		if (other.gameObject.tag == "Body")
 		{
 			print (" BODY IN " + Time.time.ToString());
-			this.rigidbody.Sleep ();
 		}
 	}
 	void OnTriggerExit(Collider other)
