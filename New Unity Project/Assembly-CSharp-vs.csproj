@@ -50,7 +50,7 @@
      <Compile Include="Assets\Play\Player\Script\PlayerMoveScript.cs" />
      <Compile Include="Assets\Play\Player\Script\ThirdPersonCameraScript.cs" />
      <Compile Include="Assets\Title\TitleScript.cs" />
-     <None Include="Assets\Play\temp\Toon.shader" />
+     <None Include="Assets\Play\temp_material\Toon.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
