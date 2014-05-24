@@ -4,6 +4,7 @@ using System.Collections;
 public class ThirdPersonCameraScript : MonoBehaviour {
 
 	public GameObject Player = null;
+	public float damping = 1f;
 	private Vector3 offset;
 
 	void Start () {
@@ -15,6 +16,13 @@ public class ThirdPersonCameraScript : MonoBehaviour {
 		Quaternion rotation = Quaternion.Euler(0, desiredAngle, 0);
 
 		transform.position = Player.transform.position - (rotation * offset);
+
+//		float currentAngle = transform.eulerAngles.y;
+//		float desiredAngle = Player.transform.eulerAngles.y + 90f;
+//		float angle = Mathf.LerpAngle(currentAngle, desiredAngle, Time.deltaTime * damping);
+//
+//		Quaternion rotation = Quaternion.Euler(0, angle, 0);
+//		transform.position = Player.transform.position - (rotation * offset);
 
 		transform.LookAt(Player.transform);
 	}
