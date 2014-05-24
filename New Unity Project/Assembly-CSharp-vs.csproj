@@ -46,9 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Play\Camera\Script\ThirdPersonCameraScript.cs" />
      <Compile Include="Assets\Play\Player\Script\PlayerAttackScript.cs" />
      <Compile Include="Assets\Play\Player\Script\PlayerMoveScript.cs" />
-     <Compile Include="Assets\Play\Player\Script\ThirdPersonCameraScript.cs" />
      <Compile Include="Assets\Title\TitleScript.cs" />
      <None Include="Assets\Play\temp_material\Toon.shader" />
   </ItemGroup>
