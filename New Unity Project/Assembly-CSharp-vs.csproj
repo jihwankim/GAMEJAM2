@@ -51,6 +51,7 @@
      <Compile Include="Assets\PlayerAttackScript.cs" />
      <Compile Include="Assets\PlayerMoveScript.cs" />
      <Compile Include="Assets\ThirdPersonCameraScript.cs" />
+     <Compile Include="Assets\Title\TitleScript.cs" />
      <None Include="Assets\Toon.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
