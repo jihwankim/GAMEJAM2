@@ -10,6 +10,6 @@ public class PlayerAttackScript : MonoBehaviour {
 	}
 
 	void Update () {
-		GameObject.Find ("Weapon").transform.position = new Vector3 (Mathf.Sin (Time.time*AttackSpeed) * Time.deltaTime, 0f, 0f);
+		GameObject.Find ("Weapon").transform.localPosition = new Vector3 (Mathf.Sin (Time.time*AttackSpeed) * Time.deltaTime * 10, 0f, 0f);
 	}
 }
