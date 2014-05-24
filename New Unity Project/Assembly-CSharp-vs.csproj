@@ -46,8 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BallControl.cs" />
-     <Compile Include="Assets\ChainCreate.cs" />
      <Compile Include="Assets\PlayerAttackScript.cs" />
      <Compile Include="Assets\PlayerMoveScript.cs" />
      <Compile Include="Assets\ThirdPersonCameraScript.cs" />
