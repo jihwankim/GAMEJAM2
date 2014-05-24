@@ -11,10 +11,7 @@ public class PlayerAttackScript : MonoBehaviour {
 		if (other.gameObject.tag == "Body")
 		{
 			print (" BODY IN " + Time.time.ToString());
-			this.transform.FindChild("Weapon").rigidbody.velocity = Vector3.zero;
-			this.transform.FindChild("Weapon").rigidbody.angularVelocity = new Vector3(0f, 0f, 0f);
-			this.transform.FindChild("Weapon").rigidbody.angularDrag = 0f;
-			//this.rigidbody.
+			this.rigidbody.Sleep ();
 		}
 	}
 	void OnTriggerExit(Collider other)
