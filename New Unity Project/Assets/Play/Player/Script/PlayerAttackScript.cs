@@ -6,11 +6,36 @@ public class PlayerAttackScript : MonoBehaviour {
 	public float AttackSpeed = 1f;
 	public float AttackRange = 1f;
 
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.gameObject.tag == "Body")
+		{
+			print (" BODY IN " + Time.time.ToString());
+			this.transform.FindChild("Weapon").rigidbody.velocity = Vector3.zero;
+			this.transform.FindChild("Weapon").rigidbody.angularVelocity = new Vector3(0f, 0f, 0f);
+			this.transform.FindChild("Weapon").rigidbody.angularDrag = 0f;
+			//this.rigidbody.
+		}
+	}
+	void OnTriggerExit(Collider other)
+	{
+		if (other.gameObject.tag == "Body")
+		{
+			print (" BODY OUT " + Time.time.ToString());
+		}
+	}
+
 	void Start () {
 	
 	}
 
 	void Update () {
-		GameObject.Find ("Weapon").transform.localPosition = new Vector3 (Mathf.Sin (Time.time*AttackSpeed) * Time.deltaTime * AttackRange, 0f, 0f);
+		transform.FindChild ("Weapon").transform.localPosition = new Vector3 (Mathf.Sin (Time.time*AttackSpeed) * Time.deltaTime * AttackRange, 0f, 0f);
+
+		GameObject [] BodyList = GameObject.FindGameObjectsWithTag ("Body");
+		for(int i = 0; i < BodyList.Length; ++i)
+		{
+			//if(this.rigidbody.
+		}
 	}
 }
