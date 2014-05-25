@@ -20,10 +20,10 @@ public class PlayerMoveScript : MonoBehaviour {
 		direction.Normalize();
 
 		if (Input.GetKey (KeyCode.W)) {
-			transform.position += direction * Time.deltaTime;
+			transform.position += direction * Time.deltaTime * 5;
 		}
 		if (Input.GetKey (KeyCode.S)) {
-			transform.position += -direction * Time.deltaTime;
+			transform.position += -direction * Time.deltaTime * 5;
 		}
 		if (Input.GetKey (KeyCode.A)) {
 			transform.RotateAround( transform.position, new Vector3(0f, -1f, 0f), 5f );
